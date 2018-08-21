@@ -84,10 +84,18 @@ export default app({
     pages: [{
         title: 'Broilerplate',
         file: 'index.pug',
-        scripts: ['index.ts'],
+        scripts: ['index.tsx'],
     }, {
         title: 'Page not found!',
         file: 'error.pug',
-        scripts: ['index.ts'],
+        scripts: ['index.tsx'],
     }],
+    /**
+     * Optional default web page that will be served when no web page file
+     * is found by the requested URL. If null or undefined, an 404 error page will be
+     * shown. Otherwise, the defined file will be served with 200 response.
+     *
+     * This is useful for single page apps using HTML5 History API.
+     */
+    defaultPage: 'index.html',
 });
